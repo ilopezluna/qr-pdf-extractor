@@ -1,0 +1,15 @@
+src/
+tests/
+coverage/
+node_modules/
+.vscode/
+.idea/
+*.test.ts
+*.spec.ts
+tsconfig.json
+jest.config.js
+.prettierrc.json
+.prettierignore
+.gitignore
+*.log
+.DS_Store

@@ -1,0 +1,61 @@
+{
+  "name": "qr-pdf-extractor",
+  "version": "1.0.0",
+  "description": "A lightweight TypeScript library to extract QR codes from PDFs without LLM",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "build": "tsc",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "keywords": [
+    "qr",
+    "qr-code",
+    "pdf",
+    "extraction",
+    "typescript",
+    "barcode"
+  ],
+  "author": "Ignacio López Luna <ignasi.lopez.luna@gmail.com>",
+  "homepage": "https://github.com/ilopezluna/qr-pdf-extractor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilopezluna/qr-pdf-extractor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ilopezluna/qr-pdf-extractor/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.7.0",
+    "@types/pngjs": "^6.0.5",
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "pdf-parse": "^2.3.0",
+    "pngjs": "^7.0.0"
+  }
+}
